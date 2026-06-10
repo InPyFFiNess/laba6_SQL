@@ -83,11 +83,15 @@ go
 
 use master
 
+-- создание файла бэкапа
+	
 backup database [User_Actions] 
 to disk = 'D:\SQL\User_Actions_backup.bak' 
 with format, 
 medianame = 'MSSQL_Backup', 
 name = 'Backup';
+
+-- восстановление
 
 go
 create procedure backupp @Path varchar(1000)
